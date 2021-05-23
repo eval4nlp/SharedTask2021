@@ -2,7 +2,11 @@
 
 This repository contains the data, baselines and evaluation scripts for the Eval4NLP Shared Task on
 Explainable Quality Estimation.
-  
+
+- **Shared task official website**: https://eval4nlp.github.io/sharedtask.html
+- **Repository**: https://github.com/eval4nlp/SharedTask2021
+- **Submission website**: Available soon
+
 ## Datasets
 
 ### Training and development data

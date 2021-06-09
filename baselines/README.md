@@ -1,0 +1,1 @@
+To be able to run the notebooks you first need to install Pytorch. The recommended version of PyTorch is 1.8. Please refer to [PyTorch installation page] (https://pytorch.org) for the specific installation command for your platform.

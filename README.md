@@ -41,7 +41,10 @@ TBD
 
 ## Baseline
 
-TBD
+As a baseline we will use [LIME explainer](https://github.com/marcotcr/lime) for pre-trained sentence-level
+quality estimation models available from the [TransQuest toolkit](https://github.com/TharinduDR/TransQuest).
+See the notebook `baselines/transquest-lime.ipynb` for an example on how to produce baseline results
+on the Romanian-English development set.
 
 ## Evaluation
 

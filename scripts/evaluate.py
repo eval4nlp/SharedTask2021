@@ -22,6 +22,17 @@ def read_word_data(gold_explanations_fh, model_explanations_fh):
     return gold_explanations, model_explanations
 
 
+def validate_word_level_data(gold_explanations, model_explanations):
+    valid_gold, valid_model = [], []
+    for gold_expl, model_expl in zip(gold_explanations, model_explanations):
+        if sum(gold_expl) == 0 or sum(gold_expl) == len(gold_expl):
+            continue
+        else:
+            valid_gold.append(gold_expl)
+            valid_model.append(valid_model)
+    return valid_gold, valid_model
+
+
 def compute_auc_score(gold_explanations, model_explanations):
     res = 0
     for i in range(len(gold_explanations)):
@@ -44,8 +55,19 @@ def compute_rec_topk(gold_explanations, model_explanations):
     return res / len(gold_explanations)
 
 
-def compute_pearson(gold_scores, model_scores):
-    return pearsonr(gold_scores, model_scores)[0]
+def evaluate_word_level(gold_explanations, model_explanations):
+    gold_explanations, model_explanations = validate_word_level_data(gold_explanations, model_explanations)
+    auc_score = compute_auc_score(gold_explanations, model_explanations)
+    ap_score = compute_ap_score(gold_explanations, model_explanations)
+    rec_topk = compute_rec_topk(gold_explanations, model_explanations)
+    print('AUC score: {:.3f}'.format(auc_score))
+    print('AP score: {:.3f}'.format(ap_score))
+    print('Recall at top-K: {:.3f}'.format(rec_topk))
+
+
+def evaluate_sentence_level(gold_scores, model_scores):
+    corr = pearsonr(gold_scores, model_scores)[0]
+    print('Pearson correlation: {:.3f}'.format(corr))
 
 
 def main():
@@ -56,16 +78,9 @@ def main():
     parser.add_argument('--model_sentence_scores_fname', type=argparse.FileType('r'), required=True)
     args = parser.parse_args()
     gold_explanations, model_explanations = read_word_data(args.gold_explanations_fname, args.model_explanations_fname)
-    auc_score = compute_auc_score(gold_explanations, model_explanations)
-    ap_score = compute_ap_score(gold_explanations, model_explanations)
-    rec_topk = compute_rec_topk(gold_explanations, model_explanations)
-
     gold_scores, model_scores = read_sentence_data(args.gold_sentence_scores_fname, args.model_sentence_scores_fname)
-    corr = compute_pearson(gold_scores, model_scores)
-    print('AUC score: {:.3f}'.format(auc_score))
-    print('AP score: {:.3f}'.format(ap_score))
-    print('Recall at top-K: {:.3f}'.format(rec_topk))
-    print('Pearson correlation: {:.3f}'.format(corr))
+    evaluate_word_level(gold_explanations, model_explanations)
+    evaluate_sentence_level(gold_scores, model_scores)
 
 
 if __name__ == '__main__':

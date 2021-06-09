@@ -29,7 +29,7 @@ def validate_word_level_data(gold_explanations, model_explanations):
             continue
         else:
             valid_gold.append(gold_expl)
-            valid_model.append(valid_model)
+            valid_model.append(model_expl)
     return valid_gold, valid_model
 
 

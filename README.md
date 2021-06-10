@@ -37,7 +37,10 @@ The differences with the QE Shared Task are as follows:
 
 ### Test data
 
-TBD
+As test data, we are collecting sentence-level quality scores and word-level error annotations for Et-En and Ro-En,
+as well as two zero-shot language pairs: German-Chinese (De-Zh) and Russian-German (Ru-De). Human annotators are 
+asked to indicate translation errors as an explanation for the overall sentence score, as well as the corresponding words
+in the source sentence. The guidelines for this annotation effort are available in the `annotation-guidelines` directory.
 
 ## Baseline
 

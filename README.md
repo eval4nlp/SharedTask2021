@@ -42,12 +42,16 @@ as well as two zero-shot language pairs: German-Chinese (De-Zh) and Russian-Germ
 asked to indicate translation errors as an explanation for the overall sentence score, as well as the corresponding words
 in the source sentence. The guidelines for this annotation effort are available in the `annotation-guidelines` directory.
 
-## Baseline
+## Baselines
 
-As a baseline we will use [LIME explainer](https://github.com/marcotcr/lime) for pre-trained sentence-level
-quality estimation models available from the [TransQuest toolkit](https://github.com/TharinduDR/TransQuest).
-See the notebook `baselines/transquest-lime.ipynb` for an example on how to produce baseline results
-on the Romanian-English development set.
+We provide the following baselines:
+
+* [TransQuest-LIME](baselines/transquest-lime.ipynb): This method uses the pre-trained sentence-level
+quality estimation models available from the [TransQuest toolkit](https://github.com/TharinduDR/TransQuest)
+to rate the translations, and uses the [LIME explainer](https://github.com/marcotcr/lime) to explain the ratings.
+* [XMover-SHAP](baselines/xmover-shap/xmover-shap.ipynb): This method uses [XMover](https://github.com/AIPHES/ACL20-Reference-Free-MT-Evaluation)
+to rate translations and uses the [SHAP explainer](https://github.com/slundberg/shap) to explain the ratings.
+
 
 ## Evaluation
 

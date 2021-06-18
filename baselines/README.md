@@ -12,7 +12,7 @@ to rate translations and uses the [SHAP explainer](https://github.com/slundberg/
 
 ## Performance
 
-* **RO-EN**(Romanian to English)
+* **RO-EN** (Romanian to English)
 
 | Methods | AUC | AP | Recall at Top-K |
 |---------|-----|----|-----------------|
@@ -20,7 +20,7 @@ to rate translations and uses the [SHAP explainer](https://github.com/slundberg/
 | XMover-SHAP | .638 | .464 | .339 |
 
 
-* **ET-EN**(Estonian to English)
+* **ET-EN** (Estonian to English)
 
 | Methods | AUC | AP | Recall at Top-K |
 |---------|-----|----|-----------------|

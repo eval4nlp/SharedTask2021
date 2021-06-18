@@ -21,16 +21,33 @@ class XMoverWrapper():
         self.ngram = ngram
         self.bs = bs
 
-        temp = np.loadtxt('./xmover/mapping/europarl-v7.' + src_lang + '-' + tgt_lang + '.2k.12.BAM.map')
-        self.projection = torch.tensor(temp, dtype=torch.float).to(device)
-        
-        temp = np.loadtxt('./xmover/mapping/europarl-v7.' + src_lang + '-' + tgt_lang + '.2k.12.GBDD.map')
-        self.bias = torch.tensor(temp, dtype=torch.float).to(device)
-
+        self.load_mapping()
         self.scorer = XMOVERScorer(model_name, language_model, do_lower_case, device)
-
         self.src_sent = None
 
+
+    def load_mapping(self):
+        mapping_dir = './xmover/mapping/'
+        flag = False
+        
+        for layer_num in [8,12]:
+            bam_path = os.path.join(mapping_dir,'layer-{}'.format(layer_num), 'europarl-v7.{}-{}.{}.BAM'.format(self.src_lang, self.tgt_lang, layer_num))
+            gbdd_path = os.path.join(mapping_dir,'layer-{}'.format(layer_num), 'europarl-v7.{}-{}.{}.GBDD'.format(self.src_lang, self.tgt_lang, layer_num))
+            if os.path.isfile(bam_path) and os.path.isfile(gbdd_path):
+                flag = True 
+                break
+                
+        if flag:
+            temp = np.load(bam_path, allow_pickle=True)
+            self.projection = torch.tensor(temp, dtype=torch.float).to(self.device)
+            temp = np.load(gbdd_path, allow_pickle=True)
+            self.bias = torch.tensor(temp, dtype=torch.float).to(self.device)
+        else:
+            print('No mapping for the specificed language pair!')
+            exit()
+
+
+               
     def __call__(self, translations):
         assert self.src_sent is not None
 

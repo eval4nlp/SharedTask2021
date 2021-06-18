@@ -16,7 +16,6 @@ to rate translations and uses the [SHAP explainer](https://github.com/slundberg/
 
 | Methods | AUC | AP | Recall at Top-K |
 |---------|-----|----|-----------------|
-| TransQuest-LIME | .353 | .300 | .310 |
 | XMover-SHAP | .638 | .464 | .339 |
 
 

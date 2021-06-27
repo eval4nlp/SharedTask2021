@@ -42,7 +42,7 @@ as well as two zero-shot language pairs: German-Chinese (DE-ZH) and Russian-Germ
 asked to indicate translation errors as an explanation for the overall sentence score, as well as the corresponding words
 in the source sentence. The guidelines for this annotation effort are available in the `annotation-guidelines` directory.
 
-We provide a gold standard of 20 annotated sentence pairs for DE-ZH and RU-DE. This may be used for the participants to gain an intuition of the task for those languages: [DE-ZH](https://drive.google.com/file/d/15oOoVof6mazqfyxoXJtqep9f2DPZZA4L/view?usp=sharing), [RU-DE](https://docs.google.com/document/d/1uW8Lx-MkwBZy0NVvM3z45fqPWS-HqnIpO8x1amCzM1o/edit?usp=sharing). The data is not tokenized in this case, unlike the data used eventually in the shared task (further,  the different colors codings are not relevant). 
+We provide a gold standard of 20 annotated sentence pairs for DE-ZH and RU-DE. This may be used for the participants to gain an intuition of the task for those languages: [DE-ZH](https://drive.google.com/file/d/10Pe5mURpCnU4f22DNWErr4jj-5UmvaFx/view?usp=sharing), [RU-DE](https://drive.google.com/file/d/1IAeT-LOUDWlN3vTQaTgnxQdXmt7_fAR6/view?usp=sharing). The data is not tokenized in this case, unlike the data used eventually in the shared task (further,  the different colors codings are not relevant). 
 
 ## Baselines
 

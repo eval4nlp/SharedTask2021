@@ -5,7 +5,7 @@ Explainable Quality Estimation.
 
 - **Shared task official website**: https://eval4nlp.github.io/sharedtask.html
 - **Repository**: https://github.com/eval4nlp/SharedTask2021
-- **Submission website**: Available soon
+- **Submission website**: https://competitions.codalab.org/competitions/33038
 
 ## Datasets
 

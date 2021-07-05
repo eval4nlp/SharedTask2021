@@ -14,7 +14,7 @@ Explainable Quality Estimation.
 The directory `data` contains training and development data for Romanian-English (Ro-En) and Estonian-English (Et-En)
 language pairs.
 
-**Note:** ```The sentence-level QE systems can be trained using sentence-level quality scores. Word-level labels derived from post-editing can be used for development purposes. However, we **discourage** participants from using the word-level data for training, as the goal of the shared task is to explore word-level quality estimation in an unsupervised setting, i.e. as a rationale extraction task.```
+**Note:** ``The sentence-level QE systems can be trained using sentence-level quality scores. Word-level labels derived from post-editing can be used for development purposes. However, we **discourage** participants from using the word-level data for training, as the goal of the shared task is to explore word-level quality estimation in an unsupervised setting, i.e. as a rationale extraction task.``
 
 The directories for each data partition and language pair contain the following files:
 

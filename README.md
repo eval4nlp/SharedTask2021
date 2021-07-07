@@ -59,7 +59,7 @@ We provide the following baselines:
 * [TransQuest-LIME](baselines/transquest-lime.ipynb): This method uses the pre-trained sentence-level
 quality estimation models available from the [TransQuest toolkit](https://github.com/TharinduDR/TransQuest)
 to rate the translations, and uses the [LIME explainer](https://github.com/marcotcr/lime) to explain the ratings.
-* [XMover-SHAP](baselines/xmover-shap/xmover-shap.ipynb): This method uses [XMover](https://github.com/AIPHES/ACL20-Reference-Free-MT-Evaluation)
+* [XMover-SHAP](baselines/xmover-shap/xmover-shap-el-en.ipynb): This method uses [XMover](https://github.com/AIPHES/ACL20-Reference-Free-MT-Evaluation)
 to rate translations and uses the [SHAP explainer](https://github.com/slundberg/shap) to explain the ratings.
 
 

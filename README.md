@@ -39,6 +39,8 @@ The differences with the QE Shared Task are as follows:
 - For simplicity, gaps are ignored. Thus, the number of word-level labels corresponds to the number of tokens.
 - OK and BAD labels are replaced by 0 and 1, respectively.
 
+**Additionally**:
+
 We provide a gold standard of 20 annotated sentence pairs for DE-ZH and RU-DE. This may be used for the participants to gain an intuition of the task for those languages: [DE-ZH](https://drive.google.com/file/d/10Pe5mURpCnU4f22DNWErr4jj-5UmvaFx/view?usp=sharing), [RU-DE](https://drive.google.com/file/d/1IAeT-LOUDWlN3vTQaTgnxQdXmt7_fAR6/view?usp=sharing). <!-- The data is not tokenized in this case, unlike the data used eventually in the shared task (further,  the different colors codings are not relevant). -->
 
 

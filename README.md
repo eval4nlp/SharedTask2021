@@ -9,16 +9,31 @@ Explainable Quality Estimation.
 
 ## Datasets
 
-### Training and development data
+### Training and development data (for sentence-level scores)
 
 The directory `data` contains training and development data for Romanian-English (Ro-En) and Estonian-English (Et-En)
 language pairs.
 
+Especially, the data contains sentence-level scores and word-level scores. The sentence-level scores can be used to train a supervised model (if participants wish, they can also use unsupervised approaches like XMoverScore).
+
+The data also contains word-level labels. Word-level labels were derived by comparing the MT outputs with their post-edited versions
+based on the alignments provided by the TER tool. 
+
+The word-level labels can be used for **exploratory purposes**, to estimate how well a model performs for word-level error prediction (in the absence of test data, which will be provided only in a later stage of the shared task). If participants don't train their systems on word-level labels, they will be routed to the **constrained track**.
+
+Alternatively, participants may train a system on the existing word-level annotations (**unconstrained track**). In this case, participants should be aware that the human annotations may be similar to the word-level annotations provided below, but there will not be a full correspondence (similar to a domain shift).
+
+Participants submitting in the constrained tracks will be evaluated separately from participants submitting in the unconstrained track.
+
+<!--
 **Note:** 
 
 > The sentence-level QE systems can be trained using sentence-level quality scores. Word-level labels derived from post-editing can be used for development purposes. However, we **discourage** participants from using the word-level data for training, as the goal of the shared task is to explore word-level quality estimation in an unsupervised setting, i.e. as a rationale extraction task.
 
 The directories for each data partition and language pair contain the following files:
+-->
+
+**Data format**
 
 - `<partition>.src`: source sentences
 - `<partition>.mt`: MT outputs
@@ -30,8 +45,7 @@ The directories for each data partition and language pair contain the following 
 - `<partition>.src-tags`: word-level labels indicating whether each token in the source corresponds to an error (1)
   or to a correct token (0) in the MT output
 
-All the data is tokenized. Word-level labels were derived by comparing the MT outputs with their post-edited versions
-based on the alignments provided by the TER tool.
+All the data is tokenized. 
 
 This data is an adjusted version of the [MLQE-PE dataset](https://github.com/sheffieldnlp/mlqe-pe) that was used
 at the [WMT2020 Shared Task on Quality Estimation](http://www.statmt.org/wmt20/quality-estimation-task.html).

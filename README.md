@@ -16,14 +16,14 @@ language pairs.
 
 Especially, the data contains _sentence-level_ scores and _word-level scores_. 
 
-     - The sentence-level scores can be used to train a supervised model (if participants wish, they can also use unsupervised approaches like XMoverScore) indicating the similar between source and target sentences.
+   - The sentence-level scores can be used to train a supervised model (if participants wish, they can also use unsupervised approaches like XMoverScore) indicating the similar between source and target sentences.
 
-      - The data also contains _word-level labels_. Word-level labels were derived by comparing the MT outputs with their post-edited versions
+   - The data also contains _word-level labels_. Word-level labels were derived by comparing the MT outputs with their post-edited versions
 based on the alignments provided by the TER tool. 
 
-      - The word-level labels can be used for **exploratory purposes**, to estimate how well a model performs for word-level error prediction (in the absence of test data, which will be provided only in a later stage of the shared task). If participants don't train their systems on word-level labels, they will be routed to the **constrained track**.
+   - The word-level labels can be used for **exploratory purposes**, to estimate how well a model performs for word-level error prediction (in the absence of test data, which will be provided only in a later stage of the shared task). If participants don't train their systems on word-level labels, they will be routed to the **constrained track**.
 
-      - Alternatively, participants may train a system on the existing word-level annotations (**unconstrained track**). In this case, participants should be aware that the human annotations may be similar to the word-level annotations provided below, but there will not be a full correspondence (similar to a domain shift).
+   - Alternatively, participants may train a system on the existing word-level annotations (**unconstrained track**). In this case, participants should be aware that the human annotations may be similar to the word-level annotations provided below, but there will not be a full correspondence (similar to a domain shift).
 
 Participants submitting in the constrained tracks will be evaluated separately from participants submitting in the unconstrained track.
 

@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Additional files
+baselines/random_baseline.py
+data/dev/et-en-dev/
+data/dev/ro-en-dev/

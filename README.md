@@ -95,6 +95,26 @@ python evaluate.py --gold_explanations_fname example/target-gold.example.roen
                    --model_sentence_scores_fname example/sentence.example.roen
 ```
 
+
+## Citation
+```
+@inproceedings{fomicheva-etal-2021-eval4nlp,
+    title = "The {E}val4{NLP} Shared Task on Explainable Quality Estimation: Overview and Results",
+    author = "Fomicheva, Marina  and
+      Lertvittayakumjorn, Piyawat  and
+      Zhao, Wei  and
+      Eger, Steffen  and
+      Gao, Yang",
+    booktitle = "Proceedings of the 2nd Workshop on Evaluation and Comparison of NLP Systems",
+    month = nov,
+    year = "2021",
+    address = "Punta Cana, Dominican Republic",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.eval4nlp-1.17",
+    pages = "165--178",
+}
+```
+
 ## Contact information
 - Website: https://eval4nlp.github.io/
 - Email: eval4nlp@gmail.com
